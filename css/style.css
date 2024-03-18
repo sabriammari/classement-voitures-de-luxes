@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Carattere&family=Merienda&display=swap');
+
+* {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.bodyBackground {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("/img/fond_voiture.jpg");
+}
+
+#titleIndex {
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 80px;
+  color: #ffffff;
+  background-color: #000000;
+  text-shadow: 0 -1px 5px #666666, 0 -2px 20px rgb(0, 0, 0);
+}
+
+#titlePage {
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 50px;
+  color: #ffff00;
+  text-shadow:  5px 5px 5px rgb(149, 149, 149);
+}
+
+#titleSelection {
+  font-family: 'Abril Fatface', sans-serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 1s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  font-family: 'carattere', sans-serif;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 60px;
+  font-weight: bold;
+  color: #fafafa;
+  display: block;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #ffee00;
+  text-shadow: 0 0 15px rgb(255, 255, 255), 0 0 10px rgba(255, 247, 5, 0.5);
+}
+
+.overlay .closebtn {
+  top: 20px;
+  right: 45px;
+  font-size: 50px;
+}
+
+#spanOpenIndex, 
+#spanCloseIndex {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.fa-bars:hover, 
+.fa-circle-xmark:hover {
+  color: #ffee00;
+}
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.25;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  left: 95%;
+  top: 88%;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  text-align: center;
+  z-index: 5;
+}
+
+swiper-container {
+  width: 70%;
+  height: auto;
+  position: relative;
+}
+
+swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+swiper-slide div {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1100px) {
+  #titleIndex {
+    font-size: 60px; 
+  } 
+}
+
+@media (max-width: 850px) {
+  #titleIndex {
+    font-size: 50px; 
+  } 
+}
+
+@media (max-width: 680px) {
+  #titleIndex {
+    font-size: 40px; 
+  } 
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 40px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media (max-width: 900px) {
+  #btn-back-to-top {
+    left: 90%; 
+  } 
+}
+
+@media (max-width: 1300px) {
+  .imageMap {
+    height: 400px; 
+  } 
+}
+
+@media (max-width: 1000px) {
+  swiper-container {
+    width: 100%;
+    height: auto;
+  }
+}

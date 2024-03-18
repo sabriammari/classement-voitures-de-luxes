@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="json/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Classement</title>
+</head>
+
+<body class="bg-black bodyBackground">
+    <header>
+        <div class="overlay myNav">
+            <span class="close-menu text-secondary closebtn m-5 text-white"><span id="spanCloseIndex"
+                    class="fa-regular fa-circle-xmark fa-xl m-3"></span></span>
+            <div class="overlay-content">
+                <a href="index.html" target="_self" class="accueil">Accueil</a>
+                <a href="contacts.html" target="_self" class="contacts">Contact</a>
+                <a href="mentions_legales.html" target="_self" class="mentionsLegales">Mentions légales</a>
+            </div>
+        </div>
+        <span class="open-menu text-secondary m-5 text-white"><span id="spanOpenIndex"
+                class="fa-solid fa-bars m-3"></span></span>
+    </header>
+    <div class="row text-center text-white mt-4">
+        <h1 id="titlePage" class="text-uppercase">Le Classement</h1>
+    </div>
+    <div class="row justify-content-center mx-auto mt-5">
+        <div class="row">
+            <div class="col-6 col-md-4 col-lg-2 text-center mx-auto">
+                <div>
+                    <label for="name-input" class="text-white pb-2">Recherche par classement</label>
+                    <input id="name-input" type="text" class="form-control" placeholder="Numéro"
+                    aria-label="Recherche par classement">
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 mt-2 text-center align-self-end">
+                <button id="search-button" type="button"
+                    class="btn bg-transparent btn-outline-light">Rechercher</button>
+            </div>
+        </div>
+    </div>
+    <div class="container px-4 my-5 py-5 text-white border-3 rounded-5 bg-black bg-opacity-75" id="custom-cards">
+        <div id="titleSelection" class="pb-2 border-bottom text-center text-white-50 fs-1">
+        </div>
+        <div class="container py-3">
+            <div class="row position-relative">
+                <div class="col-12 col-sm-12 col-md-6 text-center align-self-center mb-3">
+                    <div id="input-name" class="text-uppercase fs-1">
+                    </div>
+                    <div id="input-model" class="fs-2">
+                    </div>
+                </div>
+                <div
+                    class="col-12 col-sm-12 col-md-6 d-flex justify-content-lg-end justify-content-md-end justify-content-sm-center justify-content-center position-relative">
+                    <div class="card bg-transparent rounded-3" style="width: 10rem;">
+                        <div id="origin-flag"></div>
+                        <div class="card-body">
+                            <div id="production-place" class="card-title text-white text-center fs-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3 mt-5">
+                <div class="col-md-12 col-lg-6 mb-md-0 p-md-4 rounded-3">
+                    <div class="card bg-transparent">
+                        <div id="car-photo-description"></div>
+                        <div class="card-body">
+                            <div id="engine-power" class="card-title text-white text-center fs-4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6 p-4 ps-md-0 text-center align-self-center">
+                    <span id="car-description" class="lh-base"></span>
+                </div>
+            </div>
+            <div class="row g-3">
+                <div class="col-12 p-4 ps-md-0 text-center align-self-center">
+                    <div class="d-flex flex-column text-center">
+                        <span id="production-exemplary" class="my-3 fs-3"></span>
+                        <span id="car-price" class="my-3 fs-3"></span>
+                    </div>
+                </div>
+                <div
+                    class="col-12 mb-md-0 p-md-4 rounded-3 text-center d-flex justify-content-center">
+                    <swiper-container class="mySwiper" navigation="true" pagination="true" pagination-clickable="true" effect="cube" grab-cursor="true" cube-effect-shadow="true"
+                    cube-effect-slide-shadows="true" cube-effect-shadow-offset="20" cube-effect-shadow-scale="0.94" autoplay-delay="2000" autoplay-disable-on-interaction="false" loop="true">
+                        <swiper-slide>
+                            <div id="car-Photo1"></div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div id="car-Photo2"></div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div id="car-Photo3"></div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div id="car-Photo4"></div>
+                        </swiper-slide>
+                    </swiper-container>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="backToTop">
+        <button id="btn-back-to-top" type="button" class="btn btn-secondary">
+            <span class="fas fa-arrow-up"></span>
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script src="json/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="json/node_modules/animejs/lib/anime.min.js"></script>
+    <script src="json/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="json/node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="json/node_modules/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

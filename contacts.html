@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="json/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contacts</title>
+</head>
+
+<body class="bg-black">
+    <div class="overlay myNav">
+        <span class="close-menu text-secondary closebtn m-5 text-white"><span id="spanCloseIndex"
+                class="fa-regular fa-circle-xmark fa-xl m-3"></span></span>
+        <div class="overlay-content">
+            <a href="index.html" target="_self" class="accueil">Accueil</a>
+            <a href="catalogue.html" target="_self" class="produits">Classement</a>
+            <a href="mentions_legales.html" target="_self" class="mentionsLegales">Mentions légales</a>
+        </div>
+    </div>
+    <span class="open-menu text-secondary m-5 text-white"><span id="spanOpenIndex"
+            class="fa-solid fa-bars m-3"></span></span>
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="w-100">
+                <div class="row mb-4 text-center text-white">
+                    <div class="col-md-3">
+                        <div class="mb-3 w-100">
+                            <div
+                                class="icon d-flex align-items-center justify-content-center rounded-circle mb-2 bg-primary mx-auto">
+                                <span class="fa fa-map-marker"></span>
+                            </div>
+                            <div class="w-100">
+                                <p>Rue de la République, 69001 Lyon</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-3 w-100">
+                            <div
+                                class="icon d-flex align-items-center justify-content-center rounded-circle mb-2 bg-primary mx-auto">
+                                <span class="fa fa-phone"></span>
+                            </div>
+                            <div class="w-100 text-decoration-underline text-primary">
+                                <p><a href="#" target="_self">+33 6 23 45 67 89</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-3 w-100 text-center">
+                            <div
+                                class="icon d-flex align-items-center justify-content-center rounded-circle mb-2 bg-primary mx-auto">
+                                <span class="fa fa-paper-plane"></span>
+                            </div>
+                            <div class="w-100 text-decoration-underline text-primary">
+                                <p><a href="#" target="_self">adresse@email.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-3 w-100 text-center">
+                            <div
+                                class="icon d-flex align-items-center justify-content-center rounded-circle mb-2 bg-primary mx-auto">
+                                <span class="fa fa-globe"></span>
+                            </div>
+                            <div class="w-100 text-decoration-underline text-primary">
+                                <a href="#" target="_self">monsite.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mx-0 justify-content-center">
+                    <div class="col-md-10 col-lg-5 d-flex align-items-stretch pt-md-3 pt-sm-3 pt-3 pt-lg-0">
+                        <div class="imageMap w-100 m-3">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.4080986500085!2d4.833584015320168!3d45.763011021476316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea560cd8b52d%3A0x95a6a820421042c1!2sRue%20de%20la%20R%C3%A9publique%2C%20Lyon!5e0!3m2!1sfr!2sfr!4v1681198811606!5m2!1sfr!2sfr" allowfullscreen=""  loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-4 w-100 h-100"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-lg-7 p-md-5 p-2">
+                        <div class="bg-white w-100 p-4 rounded-3 text-dark">
+                            <h3 class="mb-4 text-center">Contactez-nous</h3>
+                            <form method="POST" id="contactForm" name="contactForm" class="contactForm"
+                                novalidate="novalidate">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="label" for="name">Nom</label>
+                                            <input type="text" class="form-control" name="name" id="name"
+                                                placeholder="Nom">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="label" for="email">Adresse mail</label>
+                                            <input type="email" class="form-control" name="email" id="email"
+                                                placeholder="Adresse mail">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="label" for="subject">Sujet</label>
+                                            <input type="text" class="form-control" name="subject" id="subject"
+                                                placeholder="Sujet">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-3">
+                                            <label class="label" for="message">Message</label>
+                                            <textarea name="message" class="form-control" id="message" cols="30"
+                                                rows="4" placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="submit" value="Envoyer le message" class="btn btn-primary">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="backToTop">
+        <button id="btn-back-to-top" type="button" class="btn btn-secondary">
+            <span class="fas fa-arrow-up"></span>
+        </button>
+    </div>
+
+    <script src="json/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="json/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="json/node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="json/node_modules/animejs/lib/anime.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
